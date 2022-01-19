@@ -1,0 +1,36 @@
+@api = http://localhost:4000/TruckGroupQ
+
+
+GET {{api}}
+
+###
+GET http://localhost:4000/permissionlogin/176
+
+###
+GET http://localhost:4002/RegistertempBycarid/นม.83-6998
+
+###
+GET http://localhost:4002/TruckQParkinglot/1/2/'2'/2/createdate/ASC
+
+
+let caneyear = "2564/2565"
+###
+GET http://localhost:4000/TruckGroupQ/LastRFIDbyCartype/1/2564/2565
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+  "GroupCarTypeId":  1,
+  "GroupQ": 4,
+  "QRFID": 999999999
+}
+
+### update
+PUT {{api}}/6
+Content-Type: application/json
+
+{
+    "qrfid": "7777"
+}

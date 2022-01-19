@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  node:
+    container_name: truckweightapi
+    image: "truckweightapi"
+    environment:
+      - TZ=UTC/UTC
+    build: .
+    volumes:
+      - node-data
+    ports:
+      - "4002:4002"
